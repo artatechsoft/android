@@ -41,7 +41,7 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:background="@color/login_logo_background_color"
-            android:src="@drawable/logo" />
+            android:src="@drawable/icon" />
 
         <Button
             android:id="@+id/centeredRefreshButton"
@@ -141,7 +141,7 @@
         <EditText
             android:id="@+id/account_username"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="64dp"
             android:ems="10"
             android:hint="@string/auth_username"
             android:inputType="textNoSuggestions" 
@@ -150,7 +150,7 @@
 		<EditText
 		    android:id="@+id/account_password"
 		    android:layout_width="match_parent"
-		    android:layout_height="wrap_content"
+		    android:layout_height="64dp"
 		    android:drawablePadding="5dp"
 		    android:ems="10"
 		    android:hint="@string/auth_password"
@@ -170,9 +170,10 @@
         <Button
             android:id="@+id/buttonOK"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_gravity="center_horizontal"
             android:enabled="false"
+            android:textSize="24dp"
             android:onClick="onOkClick"
             android:text="@string/setup_btn_connect" />
 

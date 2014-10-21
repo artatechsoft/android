@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- App name  and other strings-->
-    <string name="app_name">ownCloud</string>
-    <string name="account_type">owncloud</string>	<!-- better if was a domain name; but changing it now would require migrate accounts when the app is updated -->
-    <string name="authority">org.owncloud</string>	<!-- better if was the app package with ".provider" appended ; it identifies the provider -->
-    <string name ="db_file">owncloud.db</string>
-    <string name ="db_name">ownCloud</string>
-    <string name ="data_folder">owncloud</string>
-    <string name ="log_name">Owncloud_</string>
-    <string name ="default_display_name_for_root_folder">ownCloud</string>
+    <string name="app_name">Drive</string>
+    <string name="account_type">midiapolis</string>	<!-- better if was a domain name; but changing it now would require migrate accounts when the app is updated -->
+    <string name="authority">midiapolis.drive</string>	<!-- better if was the app package with ".provider" appended ; it identifies the provider -->
+    <string name ="db_file">drive.db</string>
+    <string name ="db_name">drive</string>
+    <string name ="data_folder">drive</string>
+    <string name ="log_name">drive_</string>
+    <string name ="default_display_name_for_root_folder">Drive</string>
     
     <!-- URLs and flags related -->
-    <string name="server_url"></string>
-    <bool name="show_server_url_input">true</bool>
-    <bool name="show_welcome_link">true</bool>
+    <string name="server_url">https://drive.midiapolis.com</string>
+    <bool name="show_server_url_input">false</bool>
+    <bool name="show_welcome_link">false</bool>
 	<string name="welcome_link_url">"https://owncloud.com/mobile/new"</string>
 	<string name="share_api_link"></string>
     
@@ -29,8 +29,8 @@
     <color name="login_background_color">#FFFFFF</color>
     <color name="login_logo_background_color">#FFFFFF</color>
     <color name="background_color">#F7F7F7</color>
-    <color name="actionbar_start_color">#1D2D44</color>
-    <color name="actionbar_end_color">#1D2D44</color>
+    <color name="actionbar_start_color">#FFFFFF</color>
+    <color name="actionbar_end_color">#FFFFFF</color>
     
     <!-- Button -->
     <color name="button_text_color">#000000</color>
@@ -39,10 +39,10 @@
     <bool name="multiaccount_support">true</bool>
     
     <!-- Help, imprint and feedback -->
-    <bool name="help_enabled">true</bool>
+    <bool name="help_enabled">false</bool>
     <bool name="imprint_enabled">false</bool> 
-    <bool name="recommend_enabled">true</bool>
-    <bool name="feedback_enabled">true</bool>
+    <bool name="recommend_enabled">false</bool>
+    <bool name="feedback_enabled">false</bool>
     <string name="url_help">http://owncloud.com/mobile/help</string>
     <string name="url_imprint"></string>
     <string name="mail_recommend">"mailto:"</string>

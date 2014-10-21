@@ -38,13 +38,15 @@
         <Button
             android:id="@+id/upload_files_btn_cancel"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
+            android:textSize="24dp"
             android:layout_weight="1"
             android:text="@string/common_cancel" />
 		<Button
 		    android:id="@+id/upload_files_btn_upload"
 		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
+		    android:layout_height="48dp"
+		    android:textSize="24dp"
 		    android:layout_weight="1"
 		    android:text="@string/uploader_btn_upload_text" />
 		
