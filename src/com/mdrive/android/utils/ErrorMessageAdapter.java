@@ -32,6 +32,7 @@ import com.owncloud.android.lib.common.operations.RemoteOperationResult.ResultCo
 import com.mdrive.android.operations.CreateFolderOperation;
 import com.mdrive.android.operations.CreateShareOperation;
 import com.mdrive.android.operations.DownloadFileOperation;
+import com.mdrive.android.operations.MoveFileOperation;
 import com.mdrive.android.operations.RemoveFileOperation;
 import com.mdrive.android.operations.RenameFileOperation;
 import com.mdrive.android.operations.SynchronizeFileOperation;

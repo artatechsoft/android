@@ -43,6 +43,7 @@ import com.mdrive.android.operations.common.SyncOperation;
 import com.mdrive.android.operations.CreateFolderOperation;
 import com.mdrive.android.operations.CreateShareOperation;
 import com.mdrive.android.operations.GetServerInfoOperation;
+import com.mdrive.android.operations.MoveFileOperation;
 import com.mdrive.android.operations.OAuth2GetAccessToken;
 import com.mdrive.android.operations.RemoveFileOperation;
 import com.mdrive.android.operations.RenameFileOperation;

@@ -36,6 +36,8 @@ import com.mdrive.android.R;
 import com.mdrive.android.authentication.AccountUtils;
 import com.mdrive.android.datamodel.FileDataStorageManager;
 import com.mdrive.android.datamodel.OCFile;
+import com.mdrive.android.datamodel.ThumbnailsCacheManager;
+import com.mdrive.android.datamodel.ThumbnailsCacheManager.AsyncDrawable;
 import com.mdrive.android.files.services.FileDownloader.FileDownloaderBinder;
 import com.mdrive.android.files.services.FileUploader.FileUploaderBinder;
 import com.mdrive.android.ui.activity.ComponentsGetter;

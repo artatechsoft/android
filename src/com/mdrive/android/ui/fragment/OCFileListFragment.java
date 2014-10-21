@@ -19,17 +19,31 @@ package com.mdrive.android.ui.fragment;
 
 import java.io.File;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.view.ContextMenu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.AdapterContextMenuInfo;
+
 import com.mdrive.android.R;
 import com.mdrive.android.datamodel.FileDataStorageManager;
 import com.mdrive.android.datamodel.OCFile;
 import com.mdrive.android.files.FileMenuFilter;
 import com.mdrive.android.ui.adapter.FileListListAdapter;
 import com.mdrive.android.ui.activity.FileDisplayActivity;
+import com.mdrive.android.ui.activity.OnEnforceableRefreshListener;
 import com.mdrive.android.ui.dialog.ConfirmationDialogFragment;
 import com.mdrive.android.ui.dialog.RemoveFileDialogFragment;
 import com.mdrive.android.ui.dialog.RenameFileDialogFragment;
 import com.mdrive.android.ui.preview.PreviewImageFragment;
-import com.mdrive.android.ui.preview.PreviewMediaFragment;import com.owncloud.android.lib.common.utils.Log_OC;
+import com.mdrive.android.ui.preview.PreviewMediaFragment;
+import com.owncloud.android.lib.common.utils.Log_OC;
+import com.mdrive.android.ui.activity.MoveActivity;
 /**
  * A Fragment that lists all files and folders in a given path.
  * 

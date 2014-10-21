@@ -14,8 +14,9 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package com.owncloud.android.utils;
+package com.mdrive.android.utils;
 
+import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapFactory.Options;
@@ -25,7 +26,7 @@ import android.graphics.BitmapFactory.Options;
  * 
  * @author David A. Velasco
  */
-public class BitmapUtils {
+@SuppressLint("NewApi") public class BitmapUtils {
     
     
     /**
@@ -37,7 +38,7 @@ public class BitmapUtils {
      * @param reqHeight     Height of the surface where the Bitmap will be drawn on, in pixels.
      * @return
      */
-    public static Bitmap decodeSampledBitmapFromFile(String srcPath, int reqWidth, int reqHeight) {
+    @SuppressLint("NewApi") public static Bitmap decodeSampledBitmapFromFile(String srcPath, int reqWidth, int reqHeight) {
     
         // set desired options that will affect the size of the bitmap
         final Options options = new Options();

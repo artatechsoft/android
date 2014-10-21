@@ -64,11 +64,19 @@ import com.actionbarsherlock.app.SherlockDialogFragment;
 import com.mdrive.android.MainApp;
 import com.mdrive.android.R;
 import com.mdrive.android.authentication.SsoWebViewClient.SsoWebViewClientListener;
-import com.owncloud.android.lib.common.accounts.AccountTypeUtils;
-import com.owncloud.android.lib.common.accounts.AccountUtils.Constants;
 import com.mdrive.android.operations.DetectAuthenticationMethodOperation.AuthenticationMethod;
 import com.mdrive.android.operations.GetServerInfoOperation;
-import com.mdrive.android.operations.OAuth2GetAccessToken;import com.owncloud.android.lib.common.network.CertificateCombinedException;
+import com.mdrive.android.operations.OAuth2GetAccessToken;
+import com.mdrive.android.services.OperationsService;
+import com.mdrive.android.services.OperationsService.OperationsServiceBinder;
+import com.mdrive.android.ui.dialog.CredentialsDialogFragment;
+import com.mdrive.android.ui.dialog.IndeterminateProgressDialog;
+import com.mdrive.android.ui.dialog.SamlWebViewDialog;
+import com.mdrive.android.ui.dialog.SslUntrustedCertDialog;
+import com.mdrive.android.ui.dialog.SslUntrustedCertDialog.OnSslUntrustedCertListener;
+import com.owncloud.android.lib.common.accounts.AccountTypeUtils;
+import com.owncloud.android.lib.common.accounts.AccountUtils.Constants;
+import com.owncloud.android.lib.common.network.CertificateCombinedException;
 import com.owncloud.android.lib.common.operations.OnRemoteOperationListener;
 import com.owncloud.android.lib.common.operations.RemoteOperation;
 import com.owncloud.android.lib.common.operations.RemoteOperationResult;
@@ -77,15 +85,6 @@ import com.owncloud.android.lib.common.utils.Log_OC;
 import com.owncloud.android.lib.resources.files.ExistenceCheckRemoteOperation;
 import com.owncloud.android.lib.resources.status.OwnCloudVersion;
 import com.owncloud.android.lib.resources.users.GetRemoteUserNameOperation;
-import com.owncloud.android.operations.DetectAuthenticationMethodOperation.AuthenticationMethod;
-import com.owncloud.android.operations.GetServerInfoOperation;
-import com.owncloud.android.operations.OAuth2GetAccessToken;
-import com.mdrive.android.services.OperationsService;
-import com.mdrive.android.services.OperationsService.OperationsServiceBinder;
-import com.mdrive.android.ui.dialog.IndeterminateProgressDialog;
-import com.mdrive.android.ui.dialog.SamlWebViewDialog;
-import com.mdrive.android.ui.dialog.SslUntrustedCertDialog;
-import com.mdrive.android.ui.dialog.SslUntrustedCertDialog.OnSslUntrustedCertListener;
 
 /**
  * This Activity is used to add an ownCloud account to the App

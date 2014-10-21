@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<?xml version="1.0" encoding="utf-8"?>
+<!--
   ownCloud Android client application
 
   Copyright (C) 2012  Bartek Przybylski
@@ -17,23 +18,19 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
-<PreferenceCategory android:title="@string/prefs_category_general">
     <PreferenceCategory android:title="@string/prefs_category_accounts" android:key="accounts_category">
     </PreferenceCategory>
     
-	<PreferenceCategory android:title="@string/prefs_category_general">
-    
+	<PreferenceCategory android:title="@string/prefs_category_general" android:key="general">
     <!-- ListPreference
         android:key="select_oc_account"
         android:title="@string/prefs_select_oc_account"
         android:summary="@string/prefs_summary_select_oc_account" 
         / -->
-<com.owncloud.android.ui.CheckBoxPreferenceWithLongTitle android:title="@string/prefs_pincode" android:key="set_pincode" 
-
-                        android:summary="@string/prefs_pincode_summary"/>                        android:summary="@string/prefs_pincode_summary"/>
+    <com.mdrive.android.ui.CheckBoxPreferenceWithLongTitle android:title="@string/prefs_pincode" android:key="set_pincode" 
+                        android:summary="@string/prefs_pincode_summary"/>
     <com.mdrive.android.ui.CheckBoxPreferenceWithLongTitle android:key="instant_uploading" 
                         android:title="@string/prefs_instant_upload"  
-                        android:enabled="false" android:shouldDisableView="true"
                         android:summary="@string/prefs_instant_upload_summary"/>
     <com.mdrive.android.ui.CheckBoxPreferenceWithLongTitle android:dependency="instant_uploading" 
         				android:disableDependentsState="true" 

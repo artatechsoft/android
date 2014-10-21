@@ -15,11 +15,11 @@
  *
  */
 
-package com.owncloud.android.ui.dialog;
+package com.mdrive.android.ui.dialog;
 
 import com.actionbarsherlock.app.SherlockDialogFragment;
-import com.owncloud.android.R;
-import com.owncloud.android.authentication.AuthenticatorActivity;
+import com.mdrive.android.R;
+import com.mdrive.android.authentication.AuthenticatorActivity;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

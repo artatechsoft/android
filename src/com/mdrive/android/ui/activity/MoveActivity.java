@@ -15,7 +15,7 @@
  *
  */
 
-package com.owncloud.android.ui.activity;
+package com.mdrive.android.ui.activity;
 
 import java.io.IOException;
 
@@ -42,8 +42,8 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.view.Window;
-import com.owncloud.android.R;
-import com.owncloud.android.datamodel.OCFile;
+import com.mdrive.android.R;
+import com.mdrive.android.datamodel.OCFile;
 import com.owncloud.android.lib.common.OwnCloudAccount;
 import com.owncloud.android.lib.common.OwnCloudClient;
 import com.owncloud.android.lib.common.OwnCloudClientManagerFactory;
@@ -52,14 +52,14 @@ import com.owncloud.android.lib.common.accounts.AccountUtils.AccountNotFoundExce
 import com.owncloud.android.lib.common.operations.RemoteOperation;
 import com.owncloud.android.lib.common.operations.RemoteOperationResult;
 import com.owncloud.android.lib.common.operations.RemoteOperationResult.ResultCode;
-import com.owncloud.android.operations.CreateFolderOperation;
-import com.owncloud.android.operations.SynchronizeFolderOperation;
-import com.owncloud.android.syncadapter.FileSyncAdapter;
-import com.owncloud.android.ui.dialog.CreateFolderDialogFragment;
-import com.owncloud.android.ui.fragment.FileFragment;
-import com.owncloud.android.ui.fragment.OCFileListFragment;
-import com.owncloud.android.utils.DisplayUtils;
-import com.owncloud.android.utils.ErrorMessageAdapter;
+import com.mdrive.android.operations.CreateFolderOperation;
+import com.mdrive.android.operations.SynchronizeFolderOperation;
+import com.mdrive.android.syncadapter.FileSyncAdapter;
+import com.mdrive.android.ui.dialog.CreateFolderDialogFragment;
+import com.mdrive.android.ui.fragment.FileFragment;
+import com.mdrive.android.ui.fragment.OCFileListFragment;
+import com.mdrive.android.utils.DisplayUtils;
+import com.mdrive.android.utils.ErrorMessageAdapter;
 import com.owncloud.android.lib.common.utils.Log_OC;
 
 public class MoveActivity extends HookActivity implements FileFragment.ContainerActivity, 

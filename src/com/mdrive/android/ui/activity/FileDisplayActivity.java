@@ -25,6 +25,7 @@ import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorException;
 import android.accounts.OperationCanceledException;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -79,6 +80,7 @@ import com.owncloud.android.lib.common.operations.RemoteOperationResult;
 import com.owncloud.android.lib.common.operations.RemoteOperationResult.ResultCode;
 import com.owncloud.android.lib.common.utils.Log_OC;import com.mdrive.android.operations.CreateFolderOperation;
 import com.mdrive.android.operations.CreateShareOperation;
+import com.mdrive.android.operations.MoveFileOperation;
 import com.mdrive.android.operations.RemoveFileOperation;
 import com.mdrive.android.operations.RenameFileOperation;
 import com.mdrive.android.operations.SynchronizeFileOperation;
@@ -106,7 +108,7 @@ import com.mdrive.android.utils.ErrorMessageAdapter;
  * @author David A. Velasco
  */
 
-public class FileDisplayActivity extends HookActivity implements
+@SuppressLint("NewApi") public class FileDisplayActivity extends HookActivity implements
 FileFragment.ContainerActivity, OnNavigationListener, 
 OnSslUntrustedCertListener, OnEnforceableRefreshListener {
     

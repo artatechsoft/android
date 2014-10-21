@@ -15,7 +15,7 @@
  *
  */
 
-package com.owncloud.android.ui.adapter;
+package com.mdrive.android.ui.adapter;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -30,7 +30,7 @@ import android.graphics.Bitmap.CompressFormat;
 import android.graphics.BitmapFactory;
 
 import com.jakewharton.disklrucache.DiskLruCache;
-import com.owncloud.android.BuildConfig;
+import com.mdrive.android.BuildConfig;
 import com.owncloud.android.lib.common.utils.Log_OC;
 
 public class DiskLruImageCache {

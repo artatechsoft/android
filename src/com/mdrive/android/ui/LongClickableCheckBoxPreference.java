@@ -1,4 +1,4 @@
-package com.owncloud.android.ui;
+package com.mdrive.android.ui;
 
 import android.content.Context;
 import android.preference.CheckBoxPreference;

@@ -15,7 +15,7 @@
  *
  */
 
-package com.owncloud.android.datamodel;
+package com.mdrive.android.datamodel;
 
 import java.io.File;
 import java.lang.ref.WeakReference;
@@ -31,11 +31,11 @@ import android.os.AsyncTask;
 import android.util.TypedValue;
 import android.widget.ImageView;
 
-import com.owncloud.android.MainApp;
+import com.mdrive.android.MainApp;
 import com.owncloud.android.lib.common.utils.Log_OC;
-import com.owncloud.android.ui.adapter.DiskLruImageCache;
-import com.owncloud.android.utils.BitmapUtils;
-import com.owncloud.android.utils.DisplayUtils;
+import com.mdrive.android.ui.adapter.DiskLruImageCache;
+import com.mdrive.android.utils.BitmapUtils;
+import com.mdrive.android.utils.DisplayUtils;
 
 /**
  * Manager for concurrent access to thumbnails cache. 

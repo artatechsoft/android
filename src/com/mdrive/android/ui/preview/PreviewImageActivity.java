@@ -43,7 +43,8 @@ import com.mdrive.android.datamodel.OCFile;
 import com.mdrive.android.files.services.FileDownloader;
 import com.mdrive.android.files.services.FileUploader;
 import com.mdrive.android.files.services.FileDownloader.FileDownloaderBinder;
-import com.mdrive.android.files.services.FileUploader.FileUploaderBinder;import com.owncloud.android.lib.common.operations.OnRemoteOperationListener;
+import com.mdrive.android.files.services.FileUploader.FileUploaderBinder;import com.ortiz.touch.ExtendedViewPager;
+import com.owncloud.android.lib.common.operations.OnRemoteOperationListener;
 import com.owncloud.android.lib.common.operations.RemoteOperation;
 import com.owncloud.android.lib.common.operations.RemoteOperationResult;
 import com.owncloud.android.lib.common.operations.RemoteOperationResult.ResultCode;
@@ -61,7 +62,7 @@ import com.mdrive.android.utils.DisplayUtils;
  *  
  *  @author David A. Velasco
  */
-public class PreviewImageActivity extends FileActivity implements 
+@SuppressLint("NewApi") public class PreviewImageActivity extends FileActivity implements 
  FileFragment.ContainerActivity,
 ViewPager.OnPageChangeListener, OnRemoteOperationListener {
     
@@ -547,7 +548,7 @@ ViewPager.OnPageChangeListener, OnRemoteOperationListener {
     }
     
     
-    @SuppressLint("InlinedApi")
+    @SuppressLint({ "InlinedApi", "NewApi" })
 	private void hideSystemUI(View anchorView) {
         anchorView.setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_HIDE_NAVIGATION         // hides NAVIGATION BAR; Android >= 4.0

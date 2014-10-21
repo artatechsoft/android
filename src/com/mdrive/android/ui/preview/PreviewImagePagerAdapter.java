@@ -31,8 +31,8 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.view.ViewGroup;
 
 import com.mdrive.android.datamodel.FileDataStorageManager;
-import com.owncloud.android.datamodel.OCFile;
-import com.owncloud.android.ui.fragment.FileFragment;
+import com.mdrive.android.datamodel.OCFile;
+import com.mdrive.android.ui.fragment.FileFragment;
 
 /**
  * Adapter class that provides Fragment instances  

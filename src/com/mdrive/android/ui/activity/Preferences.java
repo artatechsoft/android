@@ -48,6 +48,7 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.mdrive.android.MainApp;import com.mdrive.android.R;
 import com.mdrive.android.authentication.AccountUtils;
+import com.mdrive.android.authentication.AuthenticatorActivity;
 import com.mdrive.android.db.DbHandler;
 import com.mdrive.android.utils.DisplayUtils;import com.owncloud.android.lib.common.utils.Log_OC;
 import com.mdrive.android.ui.LongClickableCheckBoxPreference;
@@ -111,6 +112,7 @@ public class Preferences extends SherlockPreferenceActivity implements AccountMa
 
         // Register context menu for list of preferences.
         registerForContextMenu(getListView());
+        PreferenceCategory preferenceCategory = (PreferenceCategory)findPreference("general");
         pCode = (CheckBoxPreference) findPreference("set_pincode");
         preferenceCategory.removePreference(pCode);
         if (pCode != null){

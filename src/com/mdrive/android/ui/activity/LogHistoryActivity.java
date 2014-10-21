@@ -41,6 +41,7 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
 import com.mdrive.android.R;import com.owncloud.android.lib.common.utils.Log_OC;import com.mdrive.android.ui.adapter.LogListAdapter;
+import com.mdrive.android.ui.dialog.LoadingDialog;
 import com.mdrive.android.utils.DisplayUtils;
 import com.mdrive.android.utils.FileStorageUtils;
 

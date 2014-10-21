@@ -1,4 +1,4 @@
-package com.owncloud.android.ui.preview;
+package com.mdrive.android.ui.preview;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

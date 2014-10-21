@@ -1,4 +1,4 @@
-package com.owncloud.android.ui.activity;
+package com.mdrive.android.ui.activity;
 
 import android.support.v4.widget.SwipeRefreshLayout;
 

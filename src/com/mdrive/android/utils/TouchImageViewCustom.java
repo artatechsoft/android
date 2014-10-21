@@ -10,10 +10,11 @@
  * Extends Android ImageView to include pinch zooming, panning, fling and double tap zoom.
  */
 
-package com.owncloud.android.utils;
+package com.mdrive.android.utils;
 
-import com.owncloud.android.ui.preview.ImageViewCustom;
+import com.mdrive.android.ui.preview.ImageViewCustom;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.Configuration;
@@ -720,7 +721,7 @@ public class TouchImageViewCustom extends ImageViewCustom {
     	this.state = state;
     }
     
-    public boolean canScrollHorizontallyFroyo(int direction) {
+    @SuppressLint("NewApi") public boolean canScrollHorizontallyFroyo(int direction) {
         return canScrollHorizontally(direction);
     }
     
