@@ -34,6 +34,8 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceManager;
+import android.preference.PreferenceScreen;
+import android.text.method.HideReturnsTransformationMethod;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.View;
@@ -113,8 +115,11 @@ public class Preferences extends SherlockPreferenceActivity implements AccountMa
         // Register context menu for list of preferences.
         registerForContextMenu(getListView());
         PreferenceCategory preferenceCategory = (PreferenceCategory)findPreference("general");
+        preferenceCategory.removePreference(findPreference("instant_uploading"));
+        preferenceCategory.removePreference(findPreference("instant_upload_on_wifi"));
+        preferenceCategory.removePreference(findPreference("instant_video_uploading"));
+        preferenceCategory.removePreference(findPreference("instant_video_upload_on_wifi"));
         pCode = (CheckBoxPreference) findPreference("set_pincode");
-        preferenceCategory.removePreference(pCode);
         if (pCode != null){
             pCode.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
                 @Override

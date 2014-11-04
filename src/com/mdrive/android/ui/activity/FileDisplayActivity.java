@@ -39,9 +39,11 @@ import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.content.SyncRequest;
+import android.content.res.Resources;
 import android.content.res.Resources.NotFoundException;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
@@ -51,9 +53,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -207,6 +214,68 @@ OnSslUntrustedCertListener, OnEnforceableRefreshListener {
     protected void onStart() {
         super.onStart();
         getSupportActionBar().setIcon(DisplayUtils.getSeasonalIconId());
+        
+        setUpBackButton();
+    }
+    
+    private void setUpBackButton() {
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
+        ViewGroup actionBarContainer = getActionBarView();
+        if(actionBarContainer != null) {
+            ViewGroup actionBarView = (ViewGroup)actionBarContainer.getChildAt(0);
+            if(actionBarView != null) {
+                ViewGroup acttionBarViewHomeView = (ViewGroup)actionBarView.getChildAt(1);
+                if(acttionBarViewHomeView != null) {                    
+                    ImageView imageView = (ImageView)acttionBarViewHomeView.getChildAt(0);
+                    imageView.setVisibility(View.VISIBLE);
+                    imageView.setOnClickListener(null); 
+                    imageView = (ImageView)acttionBarViewHomeView.getChildAt(1);
+                    FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams)imageView.getLayoutParams();
+                    layoutParams.rightMargin = 40;
+                    imageView.setLayoutParams(layoutParams);
+                    
+                    acttionBarViewHomeView.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                        
+                        @Override
+                        public void onFocusChange(View v, boolean hasFocus) {
+                            // TODO Auto-generated method stub
+                            ViewGroup acttionBarViewHomeView = (ViewGroup)v;
+                            ImageView imageView = (ImageView)acttionBarViewHomeView.getChildAt(0);
+                            if(hasFocus) {
+                                acttionBarViewHomeView.setBackgroundResource(R.drawable.btn_back_round_pressed);
+                            } else {
+                                acttionBarViewHomeView.setBackgroundResource(0);
+                            }
+                            
+                        }
+                    });
+
+                    acttionBarViewHomeView.setOnClickListener(new View.OnClickListener() {
+                        
+                        @Override
+                        public void onClick(View v) {
+                            // TODO Auto-generated method stub
+                            FileDisplayActivity.this.onBackPressed();
+                        }
+                    });
+                }
+            }            
+        }
+    }
+
+    private ViewGroup getActionBarView() {
+
+        int actionViewResId = 0;
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
+            actionViewResId = getResources().getIdentifier("abs__action_bar_container", "id", getPackageName());
+        } else {
+            actionViewResId = Resources.getSystem().getIdentifier("action_bar_container", "id", "android");
+        }
+        if (actionViewResId > 0) {
+            return (ViewGroup)this.findViewById(actionViewResId);
+        }
+
+        return null;
     }
 
     @Override
@@ -1222,6 +1291,7 @@ OnSslUntrustedCertListener, OnEnforceableRefreshListener {
      * TODO
      */
     private void updateNavigationElementsInActionBar(OCFile chosenFile) {
+        /*
         ActionBar actionBar = getSupportActionBar(); 
         if (chosenFile == null || mDualPane) {
             // only list of files - set for browsing through folders
@@ -1241,6 +1311,7 @@ OnSslUntrustedCertListener, OnEnforceableRefreshListener {
             actionBar.setTitle(chosenFile.getFileName());
             actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
         }
+        */
     }
 
 

@@ -24,7 +24,6 @@
     android:orientation="horizontal"
     android:baselineAligned="false"
     >
-
 	<FrameLayout 
 		android:layout_width="0dp"
 		android:layout_height="match_parent"

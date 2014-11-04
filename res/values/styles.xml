@@ -27,7 +27,9 @@
     	<item name="android:buttonStyle">@style/Theme.ownCloud.ButtonStyle</item>
     	<item name="actionDropDownStyle">@style/Theme.ownCloud.DropDownStyle</item>
     	<item name="android:actionDropDownStyle">@style/Theme.ownCloud.DropDownStyle</item>
-	</style>
+    	<item name="android:actionOverflowButtonStyle">@style/Theme.ownCloud.actionOverflowButtonStyle</item>
+    	<item name="actionOverflowButtonStyle">@style/Theme.ownCloud.actionOverflowButtonStyle</item>
+    </style>
 	
 	<style name="Theme.ownCloud.noActionBar" parent="style/Theme.Sherlock.Light.NoActionBar">
       <item name="android:actionBarStyle">@style/Theme.ownCloud.Widget.ActionBar</item>
@@ -49,18 +51,22 @@
 	<style name="Theme.ownCloud.Widget.ActionBar" parent="style/Widget.Sherlock.Light.ActionBar.Solid.Inverse">
     	<item name="android:background">@drawable/main_header_bg</item>
     	<item name="background">@drawable/main_header_bg</item>
-    	<item name="android:textColor">#000000</item>
+    	<item name="android:textColor">@android:color/black</item>
     	<item name="android:shadowColor">#222222</item>
     	<item name="android:shadowRadius">1</item>
     	<item name="android:shadowDy">1</item>
     	<item name="android:backgroundSplit">@drawable/split_action_bg</item>
     	<item name="android:indeterminateProgressStyle">@style/Theme.ownCloud.IndeterminateStyle</item>
     	<item name="indeterminateProgressStyle">@style/Theme.ownCloud.IndeterminateStyle</item>
-    	<item name="titleTextStyle">@style/Theme.ownCloud.TitleTextStyle</item>
+    	<!-- <item name="titleTextStyle">@style/Theme.ownCloud.TitleTextStyle</item> -->
 	</style>
 
+	<style name="Theme.ownCloud.actionOverflowButtonStyle" parent="style/Widget.Sherlock.ActionButton.Overflow">
+	    <item name="android:src">@drawable/action_menu</item>
+	</style>
+	    
 	<style name="Theme.ownCloud.TitleTextStyle">
-		<item name="android:textColor">#000000</item> 
+		<item name="android:textColor">@android:color/black</item> 
 		<item name="android:textSize">18dp</item>   
 	</style>
 	
