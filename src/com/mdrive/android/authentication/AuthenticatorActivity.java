@@ -238,6 +238,12 @@ SsoWebViewClientListener, OnSslUntrustedCertListener {
 
         //Log_OC.wtf(TAG,  "onCreate end");
     }
+    
+
+    public void onBackPressed(View view) {
+        // TODO Auto-generated method stub
+        onBackPressed();
+    }
 
     private void initAuthTokenType() {
         mAuthTokenType = 

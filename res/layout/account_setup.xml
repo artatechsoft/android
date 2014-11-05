@@ -176,6 +176,16 @@
             android:textSize="24dp"
             android:onClick="onOkClick"
             android:text="@string/setup_btn_connect" />
+        
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:enabled="true"
+            android:textSize="24dp"
+            android:onClick="onBackPressed"
+            android:text="@string/common_cancel" />
 
         <Button
             android:id="@+id/welcome_link"
