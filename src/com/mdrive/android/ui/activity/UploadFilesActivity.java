@@ -111,10 +111,10 @@ public class UploadFilesActivity extends FileActivity implements
         ActionBar actionBar = getSupportActionBar();
         actionBar.setIcon(DisplayUtils.getSeasonalIconId());
         actionBar.setHomeButtonEnabled(true);   // mandatory since Android ICS, according to the official documentation
-        actionBar.setDisplayHomeAsUpEnabled(mCurrentDir != null && mCurrentDir.getName() != null);
-        actionBar.setDisplayShowTitleEnabled(false);
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
-        actionBar.setListNavigationCallbacks(mDirectories, this);
+        actionBar.setDisplayHomeAsUpEnabled(true);//mCurrentDir != null && mCurrentDir.getName() != null);
+        actionBar.setDisplayShowTitleEnabled(true);
+        //actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+        //actionBar.setListNavigationCallbacks(mDirectories, this);
         
         // wait dialog
         if (mCurrentDialog != null) {
