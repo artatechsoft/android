@@ -12,6 +12,7 @@
     
     <!-- URLs and flags related -->
     <string name="server_url">https://drive.midiapolis.com</string>
+    <string name="owncloud_server_version">6.0.5.1</string>
     <bool name="show_server_url_input">false</bool>
     <bool name="show_welcome_link">false</bool>
 	<string name="welcome_link_url">"https://owncloud.com/mobile/new"</string>

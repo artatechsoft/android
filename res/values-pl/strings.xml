@@ -180,7 +180,7 @@
   <string name="confirmation_remove_local">Tylko lokalnie</string>
   <string name="confirmation_remove_folder_local">Tylko zasoby lokalne</string>
   <string name="confirmation_remove_remote">Usuń z serwera</string>
-  <string name="confirmation_remove_remote_and_local">Z serwera i telefonu</string>
+  <string name="confirmation_remove_remote_and_local">Z serwera i urządzenia</string>
   <string name="remove_success_msg">Usunięto</string>
   <string name="remove_fail_msg">Nie można usunąć</string>
   <string name="rename_dialog_title">Wprowadź nową nazwę</string>

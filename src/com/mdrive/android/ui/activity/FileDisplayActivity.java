@@ -224,7 +224,16 @@ OnSslUntrustedCertListener, OnEnforceableRefreshListener {
         if(actionBarContainer != null) {
             ViewGroup actionBarView = (ViewGroup)actionBarContainer.getChildAt(0);
             if(actionBarView != null) {
-                ViewGroup acttionBarViewHomeView = (ViewGroup)actionBarView.getChildAt(1);
+                ViewGroup acttionBarViewHomeView = null;
+                if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN ) {
+                    acttionBarViewHomeView = (ViewGroup)actionBarView.getChildAt(1);
+                } else {
+                    ViewGroup viewGroup = (ViewGroup)actionBarView.getChildAt(0);
+                    if(viewGroup != null) {
+                        acttionBarViewHomeView = (ViewGroup)viewGroup.getChildAt(0);
+                    }
+                }
+
                 if(acttionBarViewHomeView != null) {                    
                     ImageView imageView = (ImageView)acttionBarViewHomeView.getChildAt(0);
                     imageView.setVisibility(View.VISIBLE);

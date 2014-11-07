@@ -32,6 +32,7 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
@@ -52,6 +53,7 @@ import com.mdrive.android.files.services.FileDownloader;
 import com.mdrive.android.files.services.FileUploader;
 import com.mdrive.android.files.services.FileDownloader.FileDownloaderBinder;
 import com.mdrive.android.files.services.FileUploader.FileUploaderBinder;
+import com.owncloud.android.lib.common.accounts.AccountUtils.Constants;
 import com.owncloud.android.lib.common.operations.OnRemoteOperationListener;
 import com.owncloud.android.lib.common.operations.RemoteOperation;
 import com.owncloud.android.lib.common.operations.RemoteOperationResult;
@@ -273,8 +275,12 @@ implements OnRemoteOperationListener, ComponentsGetter {
                 
                 if(email!=null || password!=null) {
                     AccountManager mAccountManager = AccountManager.get(this);
-                    Account account = new Account(email,MainApp.getAccountType());
+                    Uri serverUri = Uri.parse(getString(R.string.server_url));
+                    String accountName = com.owncloud.android.lib.common.accounts.AccountUtils.buildAccountName(serverUri, email);
+                    Account account = new Account(accountName,MainApp.getAccountType());
                     mAccountManager.addAccountExplicitly(account, password, null);
+                    mAccountManager.setUserData(account, Constants.KEY_OC_BASE_URL, serverUri.toString());
+                    mAccountManager.setUserData(account, Constants.KEY_OC_VERSION, getString(R.string.owncloud_server_version));
                     newAccount = account;
 
                     Editor editor = pref.edit();
