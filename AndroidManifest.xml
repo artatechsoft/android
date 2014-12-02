@@ -60,16 +60,12 @@
         </activity>
         <activity android:name=".ui.activity.UploadFilesActivity">
         </activity>
-        <activity android:name=".ui.activity.Uploader" >
+        <activity android:name="com.mdrive.android.ui.activity.Uploader" >
             <intent-filter>
                 <action android:name="android.intent.action.SEND" >
                 </action>
-
-                <category android:name="android.intent.category.DEFAULT" >
+				<category android:name="android.intent.category.DEFAULT" >
                 </category>
-
-                <data android:mimeType="*/*" >
-                </data>
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND_MULTIPLE" >
@@ -77,10 +73,6 @@
 
                 <category android:name="android.intent.category.DEFAULT" >
                 </category>
-
-                <data android:mimeType="*/*" >
-                </data>
-
 			</intent-filter>
         </activity>
         <activity

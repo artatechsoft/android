@@ -312,6 +312,7 @@ public class Uploader extends ListActivity implements OnItemClickListener, andro
             Button btn = (Button) findViewById(R.id.uploader_choose_folder);
             btn.setOnClickListener(this);
             getListView().setOnItemClickListener(this);
+            btn.requestFocus();
         }
     }
 

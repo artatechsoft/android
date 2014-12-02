@@ -220,6 +220,7 @@ OnSslUntrustedCertListener, OnEnforceableRefreshListener {
     
     private void setUpBackButton() {
         getSupportActionBar().setDisplayShowTitleEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ViewGroup actionBarContainer = getActionBarView();
         if(actionBarContainer != null) {
             ViewGroup actionBarView = (ViewGroup)actionBarContainer.getChildAt(0);
@@ -571,13 +572,13 @@ OnSslUntrustedCertListener, OnEnforceableRefreshListener {
             break;
         }
         case android.R.id.home: {
-            FileFragment second = getSecondFragment();
-            OCFile currentDir = getCurrentDir();
-            if((currentDir != null && currentDir.getParentId() != 0) || 
-                    (second != null && second.getFile() != null)) {                
+            //FileFragment second = getSecondFragment();
+            //OCFile currentDir = getCurrentDir();
+            //if((currentDir != null && currentDir.getParentId() != 0) || 
+            //        (second != null && second.getFile() != null)) {                
                 onBackPressed(); 
                 
-            }
+            //}
             break;
         }
         default:
