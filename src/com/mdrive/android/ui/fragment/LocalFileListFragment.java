@@ -18,6 +18,7 @@
 package com.mdrive.android.ui.fragment;
 
 import java.io.File;
+import java.util.ArrayList;
 
 import com.mdrive.android.R;
 import com.mdrive.android.ui.adapter.LocalFileListAdapter;import android.app.Activity;
@@ -208,16 +209,18 @@ public class LocalFileListFragment extends ExtendedListFragment {
      * @return      File paths to the files checked by the user.
      */
     public String[] getCheckedFilePaths() {
-        String [] result = null;
+        ArrayList<String> result = new ArrayList<String>();
         SparseBooleanArray positions = mList.getCheckedItemPositions();
         if (positions.size() > 0) {
-            Log_OC.d(TAG, "Returning " + positions.size() + " selected files");
-            result = new String[positions.size()];
-            for (int i=0; i<positions.size(); i++) {
-                result[i] = ((File) mList.getItemAtPosition(positions.keyAt(i))).getAbsolutePath();
+            for (int i = 0; i < positions.size(); i++) {
+                if (positions.get(positions.keyAt(i)) == true) {
+                    result.add(((File) mList.getItemAtPosition(positions.keyAt(i))).getAbsolutePath());
+                }
             }
+
+            Log_OC.d(TAG, "Returning " + result.size() + " selected files");
         }
-        return result;
+        return result.toArray(new String[result.size()]);
     }
 
     

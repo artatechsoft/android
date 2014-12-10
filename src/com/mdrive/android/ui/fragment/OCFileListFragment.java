@@ -320,10 +320,10 @@ public class OCFileListFragment extends ExtendedListFragment {
                 return true;
             }
             case R.id.action_move: {
-                Intent action = new Intent(getActivity(), MoveActivity.class);
+                Intent action = new Intent(getActivity(), FolderPickerActivity.class);
 
                 // Pass mTargetFile that contains info of selected file/folder
-                action.putExtra(MoveActivity.EXTRA_TARGET_FILE, mTargetFile);
+                action.putExtra(FolderPickerActivity.EXTRA_FILE, mTargetFile);
                 getActivity().startActivityForResult(action, FileDisplayActivity.ACTION_MOVE_FILES);
                 return true;
             }
@@ -384,5 +384,17 @@ public class OCFileListFragment extends ExtendedListFragment {
             mFile = directory;
         }
     }
+    
+    public void sortByName(boolean descending) {
+        mAdapter.setSortOrder(FileListListAdapter.SORT_NAME, descending);
+    }
+
+    public void sortByDate(boolean descending) {
+        mAdapter.setSortOrder(FileListListAdapter.SORT_DATE, descending);
+    }
+
+    public void sortBySize(boolean descending) {
+        mAdapter.setSortOrder(FileListListAdapter.SORT_SIZE, descending);
+    }  
 
 }
