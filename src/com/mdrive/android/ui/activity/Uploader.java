@@ -63,7 +63,7 @@ import android.widget.Toast;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockListActivity;
 import com.actionbarsherlock.view.MenuItem;
-import com.owncloud.android.utils.DisplayUtils;
+import com.mdrive.android.utils.DisplayUtils;
 
 /**
  * This can be used to upload things to an ownCloud instance.

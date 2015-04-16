@@ -31,7 +31,7 @@
                         android:summary="@string/prefs_pincode_summary"/>
 	</PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/prefs_category_instant_uploading">
+    <PreferenceCategory android:title="@string/prefs_category_instant_uploading" android:key="instant_uploading">
         <com.mdrive.android.ui.PreferenceWithLongSummary
 							android:title="@string/prefs_instant_upload_path_title"
 							android:key="instant_upload_path" />

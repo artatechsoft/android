@@ -102,6 +102,7 @@ import com.mdrive.android.operations.SynchronizeFolderOperation;
 import com.mdrive.android.operations.UnshareLinkOperation;
 import com.mdrive.android.services.observer.FileObserverService;
 import com.mdrive.android.syncadapter.FileSyncAdapter;
+import com.mdrive.android.ui.adapter.FileListListAdapter;
 import com.mdrive.android.ui.dialog.CreateFolderDialogFragment;
 import com.mdrive.android.ui.dialog.SslUntrustedCertDialog;
 import com.mdrive.android.ui.dialog.SslUntrustedCertDialog.OnSslUntrustedCertListener;
@@ -114,7 +115,7 @@ import com.mdrive.android.ui.preview.PreviewMediaFragment;
 import com.mdrive.android.ui.preview.PreviewVideoActivity;
 import com.mdrive.android.utils.DisplayUtils;
 import com.mdrive.android.utils.ErrorMessageAdapter;
-import com.owncloud.android.utils.UriUtils;
+import com.mdrive.android.utils.UriUtils;
 
 /**
  * Displays, what files the user has available in his ownCloud.
@@ -169,7 +170,7 @@ OnSslUntrustedCertListener, OnEnforceableRefreshListener {
     protected void onCreate(Bundle savedInstanceState) {
         Log_OC.d(TAG, "onCreate() start");
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
-
+        
         super.onCreate(savedInstanceState); // this calls onAccountChanged() when ownCloud Account is valid
 
         // PIN CODE request ;  best location is to decide, let's try this first

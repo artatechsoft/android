@@ -37,7 +37,7 @@ import android.os.AsyncTask;
 import android.widget.ImageView;
 
 import com.mdrive.android.MainApp;
-import com.owncloud.android.R;
+import com.mdrive.android.R;
 import com.owncloud.android.lib.common.OwnCloudAccount;
 import com.owncloud.android.lib.common.OwnCloudClient;
 import com.owncloud.android.lib.common.OwnCloudClientManagerFactory;

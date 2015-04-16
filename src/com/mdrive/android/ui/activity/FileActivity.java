@@ -44,6 +44,7 @@ import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.mdrive.android.MainApp;
 import com.mdrive.android.R;
+import com.mdrive.android.authentication.AccountAuthenticator;
 import com.mdrive.android.authentication.AccountUtils;
 import com.mdrive.android.authentication.AuthenticatorActivity;
 import com.mdrive.android.datamodel.FileDataStorageManager;

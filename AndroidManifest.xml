@@ -37,7 +37,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="9"
         android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
@@ -94,7 +94,7 @@
 		</activity>        
 
         <service
-            android:name=".authentication.AccountAuthenticatorService"
+            android:name="com.mdrive.android.authentication.AccountAuthenticatorService"
             android:exported="true">
             <intent-filter  android:priority="100">
                 <action android:name="android.accounts.AccountAuthenticator" />
@@ -127,7 +127,7 @@
         </provider>
 
         <activity
-            android:name=".authentication.AuthenticatorActivity"
+            android:name="com.mdrive.android.authentication.AuthenticatorActivity"
             android:exported="true"
             android:theme="@style/Theme.ownCloud.noActionBar" 
             android:launchMode="singleTask">

@@ -51,6 +51,7 @@ import com.actionbarsherlock.view.MenuItem;
 import com.mdrive.android.MainApp;import com.mdrive.android.R;
 import com.mdrive.android.authentication.AccountUtils;
 import com.mdrive.android.authentication.AuthenticatorActivity;
+import com.mdrive.android.datamodel.OCFile;
 import com.mdrive.android.db.DbHandler;
 import com.mdrive.android.utils.DisplayUtils;
 import com.owncloud.android.lib.common.utils.Log_OC;
@@ -122,11 +123,17 @@ public class Preferences extends SherlockPreferenceActivity implements AccountMa
 
         // Register context menu for list of preferences.
         registerForContextMenu(getListView());
-        PreferenceCategory preferenceCategory = (PreferenceCategory)findPreference("general");
+        PreferenceCategory preferenceCategory = (PreferenceCategory)findPreference("instant_uploading");
+        getPreferenceScreen().removePreference(preferenceCategory);
+        /*
+        PreferenceCategory preferenceCategory = (PreferenceCategory)findPreference("instant_uploading");
         preferenceCategory.removePreference(findPreference("instant_uploading"));
         preferenceCategory.removePreference(findPreference("instant_upload_on_wifi"));
         preferenceCategory.removePreference(findPreference("instant_video_uploading"));
         preferenceCategory.removePreference(findPreference("instant_video_upload_on_wifi"));
+        preferenceCategory.removePreference(findPreference("instant_video_upload_path"));
+        preferenceCategory.removePreference(findPreference("instant_upload_path"));
+        */
         pCode = (CheckBoxPreference) findPreference("set_pincode");
         if (pCode != null){
             pCode.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
@@ -251,7 +258,7 @@ public class Preferences extends SherlockPreferenceActivity implements AccountMa
                 preferenceCategory.removePreference(pImprint);
             }
         }
-
+/*
         mPrefInstantUploadPath =  findPreference("instant_upload_path");
         if (mPrefInstantUploadPath != null){
 
@@ -285,7 +292,7 @@ public class Preferences extends SherlockPreferenceActivity implements AccountMa
                     }
                 });
         }
-            
+          */  
         /* About App */
        pAboutApp = (Preference) findPreference("about_app");
        if (pAboutApp != null) { 
@@ -299,8 +306,8 @@ public class Preferences extends SherlockPreferenceActivity implements AccountMa
                }
        }
 
-       loadInstantUploadPath();
-       loadInstantUploadVideoPath();
+       //loadInstantUploadPath();
+       //loadInstantUploadVideoPath();
 
     }
 

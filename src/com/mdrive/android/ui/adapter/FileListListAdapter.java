@@ -50,7 +50,7 @@ import com.mdrive.android.files.services.FileDownloader.FileDownloaderBinder;
 import com.mdrive.android.files.services.FileUploader.FileUploaderBinder;
 import com.mdrive.android.ui.activity.ComponentsGetter;
 import com.mdrive.android.utils.DisplayUtils;
-import com.owncloud.android.utils.FileStorageUtils;
+import com.mdrive.android.utils.FileStorageUtils;
 
 /**
  * This Adapter populates a ListView with all files and folders in an ownCloud
